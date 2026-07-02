@@ -37,6 +37,9 @@ export function FoodForm({ initial, onCancel, onSave }: Props) {
     initial?.gramPerUnit != null ? String(initial.gramPerUnit) : '',
   )
   const [notes, setNotes] = useState(initial?.notes ?? '')
+  const [defaultGrams, setDefaultGrams] = useState(
+    initial?.defaultGrams != null ? String(initial.defaultGrams) : '',
+  )
 
   function buildFood(): Omit<Food, 'id' | 'createdAt'> {
     const food: Omit<Food, 'id' | 'createdAt'> = {
@@ -63,6 +66,8 @@ export function FoodForm({ initial, onCancel, onSave }: Props) {
         food.kcalPerGram = v / gpu
       }
     }
+    const dg = parseFloat(defaultGrams)
+    if (dg > 0) food.defaultGrams = dg
     return food
   }
 
@@ -96,6 +101,17 @@ export function FoodForm({ initial, onCancel, onSave }: Props) {
             </option>
           ))}
         </select>
+      </label>
+
+      <label className="field">
+        <span className="field-label">默认克数（固定食物，可选）</span>
+        <input
+          type="number"
+          inputMode="decimal"
+          value={defaultGrams}
+          onChange={(e) => setDefaultGrams(e.target.value)}
+          placeholder="例如 15，留空表示非固定"
+        />
       </label>
 
       <div className="field">

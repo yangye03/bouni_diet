@@ -21,8 +21,20 @@ export function loadData(): AppData {
       return initial
     }
     const parsed = JSON.parse(raw) as Partial<AppData>
+    const existingFoods = parsed.foods ?? []
+    const defaults = defaultFoods()
+    const existingIds = new Set(existingFoods.map((f) => f.id))
+    const merged = [...existingFoods]
+    for (const d of defaults) {
+      if (existingIds.has(d.id)) {
+        const idx = merged.findIndex((f) => f.id === d.id)
+        merged[idx] = { ...d, ...merged[idx] }
+      } else {
+        merged.push(d)
+      }
+    }
     return {
-      foods: parsed.foods ?? defaultFoods(),
+      foods: merged,
       foodLogs: parsed.foodLogs ?? [],
       weightLogs: parsed.weightLogs ?? defaultWeightLogs(),
       settings: { ...defaultSettings, ...(parsed.settings ?? {}) },

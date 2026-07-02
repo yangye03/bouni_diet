@@ -7,6 +7,9 @@ import { calcLogKcal, foodCanCalculate, formatGrams, formatKcal } from '../utils
 export function AddLog() {
   const { foods, addFoodLog } = useData()
   const calculableFoods = foods.filter(foodCanCalculate)
+  const quickFoods = foods.filter(
+    (f) => f.defaultGrams && f.defaultGrams > 0 && foodCanCalculate(f),
+  )
 
   const [foodId, setFoodId] = useState(calculableFoods[0]?.id ?? '')
   const [grams, setGrams] = useState('')
@@ -54,6 +57,28 @@ export function AddLog() {
       <header className="page-header">
         <h1 className="page-title">记录进食</h1>
       </header>
+
+      {quickFoods.length > 0 && (
+        <Card className="quick-card">
+          <div className="quick-title">快捷记录（固定食物）</div>
+          <div className="quick-row">
+            {quickFoods.map((f) => (
+              <button
+                key={f.id}
+                type="button"
+                className="quick-btn"
+                onClick={() => {
+                  setFoodId(f.id)
+                  setGrams(String(f.defaultGrams))
+                }}
+              >
+                <span className="quick-name">{f.name}</span>
+                <span className="quick-grams">{f.defaultGrams} g</span>
+              </button>
+            ))}
+          </div>
+        </Card>
+      )}
 
       <Card className="form-card">
         <label className="field">

@@ -2,10 +2,10 @@ import { useData } from '../store/DataContext'
 import { Card } from '../components/Card'
 import { ProgressBar } from '../components/ProgressBar'
 import { prettyDate, todayStr } from '../utils/date'
-import { formatGrams, formatKcal, remainingGrams } from '../utils/calories'
+import { formatGrams, formatKcal } from '../utils/calories'
 
 export function Today() {
-  const { settings, foodLogs, weightLogs, foods, deleteFoodLog } = useData()
+  const { settings, foodLogs, weightLogs, deleteFoodLog } = useData()
 
   const today = todayStr()
   const todayLogs = foodLogs.filter((l) => l.date === today)
@@ -15,10 +15,6 @@ export function Today() {
 
   const latestWeightLog = [...weightLogs].sort((a, b) => a.date.localeCompare(b.date)).pop()
   const latestWeight = latestWeightLog?.weightKg ?? settings.currentWeight
-
-  const orijen = foods.find((f) => f.id === 'orijen-indoor' || /orijen/i.test(f.name))
-  const orijenPerGram = orijen?.kcalPerGram ?? 3.71
-  const orijenGrams = remaining > 0 ? remainingGrams(remaining, orijenPerGram) : 0
 
   let statusMsg = ''
   let statusType: 'ok' | 'full' | 'over' = 'ok'
@@ -90,23 +86,6 @@ export function Today() {
         <div className={`status-msg ${statusType}`}>{statusMsg}</div>
         {inSafeRange && remaining !== 0 && (
           <div className="safe-hint">已进入安全摄入范围（{safeRangeMin}–{safeRangeMax} kcal）</div>
-        )}
-      </Card>
-
-      <Card className="calc-card">
-        <div className="calc-title">剩余可吃 · 换算</div>
-        {remaining > 0 ? (
-          <div className="calc-body">
-            <div className="calc-formula">
-              剩余 {formatKcal(remaining)} kcal ÷ {orijenPerGram} kcal/g
-              <span className="calc-source">（{orijen?.name ?? 'Orijen 室内伴侣猫粮'}）</span>
-            </div>
-            <div className="calc-result">
-              ≈ <span className="calc-grams">{formatGrams(orijenGrams)} g</span>
-            </div>
-          </div>
-        ) : (
-          <div className="calc-body">今日热量已达标，不再额外喂食。</div>
         )}
       </Card>
 

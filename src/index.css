@@ -163,6 +163,7 @@ textarea {
 /* calorie card */
 .calorie-card {
   text-align: center;
+  background: linear-gradient(135deg, #f3edfb 0%, #fbe7ef 100%);
 }
 .calorie-header {
   display: flex;
@@ -245,35 +246,38 @@ textarea {
   color: var(--text-muted);
 }
 
-/* calc card */
-.calc-card {
-  background: linear-gradient(135deg, #f3edfb 0%, #fbe7ef 100%);
+/* quick record */
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.calc-title {
+.quick-title {
   font-size: 13px;
   color: var(--text-muted);
 }
-.calc-body {
-  font-size: 15px;
-  margin-top: 6px;
-  line-height: 1.6;
+.quick-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
-.calc-grams {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--primary);
-  margin: 0 4px;
-}
-.calc-formula {
+.quick-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
   color: var(--text);
 }
-.calc-formula .calc-source {
-  color: var(--text-muted);
-  font-size: 12px;
-}
-.calc-result {
-  margin-top: 4px;
+.quick-btn .quick-grams {
+  font-weight: 700;
+  color: var(--primary);
 }
 
 .calc-explain {

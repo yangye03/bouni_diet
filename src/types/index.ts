@@ -16,6 +16,8 @@ export interface Food {
   notes?: string
   /** True when calorie data is not yet known ("数据待补充"). */
   needsData?: boolean
+  /** 固定食物的默认克数。有值时在「记录」页显示为快捷按钮。 */
+  defaultGrams?: number
   createdAt: number
 }
 

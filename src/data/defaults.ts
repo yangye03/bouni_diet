@@ -10,7 +10,18 @@ export function defaultFoods(): Food[] {
       brand: 'Orijen',
       category: 'dry',
       kcalPerGram: 3.71,
+      defaultGrams: 15,
       notes: '3710 kcal/kg',
+      createdAt: Date.now(),
+    },
+    {
+      id: 'weishi-freeze-dried',
+      name: '卫仕冻干',
+      brand: '卫仕',
+      category: 'freeze-dried',
+      kcalPerGram: 4.04,
+      defaultGrams: 7.5,
+      notes: '404 kcal/100g',
       createdAt: Date.now(),
     },
   ]
