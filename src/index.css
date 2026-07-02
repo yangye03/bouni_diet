@@ -37,7 +37,7 @@ body,
   min-height: 100%;
   background-color: var(--bg);
   background-image: url('/paws.svg');
-  background-size: 300px 300px;
+  background-size: 360px 360px;
   background-position: 0 0;
   background-repeat: repeat;
   color: var(--text);
