@@ -37,7 +37,7 @@ export function Today() {
     <div className="page">
       <header className="page-header">
         <div className="header-left">
-          <img className="cat-avatar" src="/buni.jpg" alt={settings.catName} />
+          <img className="cat-avatar" src={`${import.meta.env.BASE_URL}buni.jpg`} alt={settings.catName} />
           <div>
             <h1 className="page-title">{settings.catName}的饮食</h1>
             <p className="page-subtitle">今日 · {prettyDate(today)}</p>
