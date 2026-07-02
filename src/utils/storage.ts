@@ -33,9 +33,20 @@ export function loadData(): AppData {
         merged.push(d)
       }
     }
+    // one-time rename: Orijen 室内伴侣猫粮 → Orijen猫粮
+    const OLD_ORIJEN_NAME = 'Orijen 室内伴侣猫粮'
+    const NEW_ORIJEN_NAME = 'Orijen猫粮'
+    for (const f of merged) {
+      if (f.id === 'orijen-indoor' && f.name === OLD_ORIJEN_NAME) {
+        f.name = NEW_ORIJEN_NAME
+      }
+    }
+    const foodLogs = (parsed.foodLogs ?? []).map((l) =>
+      l.foodName === OLD_ORIJEN_NAME ? { ...l, foodName: NEW_ORIJEN_NAME } : l,
+    )
     return {
       foods: merged,
-      foodLogs: parsed.foodLogs ?? [],
+      foodLogs,
       weightLogs: parsed.weightLogs ?? defaultWeightLogs(),
       settings: { ...defaultSettings, ...(parsed.settings ?? {}) },
     }

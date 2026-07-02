@@ -35,7 +35,7 @@ npm run preview  # 预览打包结果
 - 猫咪名字：布尼
 - 当前体重：6.3 kg　目标：5.75 kg
 - 每日热量目标：240 kcal　安全范围：230–260 kcal
-- 默认食物：Orijen 室内伴侣猫粮（3710 kcal/kg = 3.71 kcal/g）
+- 默认食物：Orijen猫粮（3710 kcal/kg = 3.71 kcal/g）
 
 以上均可在应用内修改。
 

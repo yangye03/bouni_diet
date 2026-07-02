@@ -6,7 +6,7 @@ export function defaultFoods(): Food[] {
   return [
     {
       id: 'orijen-indoor',
-      name: 'Orijen 室内伴侣猫粮',
+      name: 'Orijen猫粮',
       brand: 'Orijen',
       category: 'dry',
       kcalPerGram: 3.71,

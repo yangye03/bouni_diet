@@ -99,7 +99,7 @@ export function Today() {
             <strong>单条记录热量</strong> = 克数 × 食物热量密度（kcal/g）。
           </p>
           <p className="explain-example">
-            例如 Orijen 室内伴侣猫粮：3710 kcal/kg ÷ 1000 = <strong>3.71 kcal/g</strong>，
+            例如 Orijen猫粮：3710 kcal/kg ÷ 1000 = <strong>3.71 kcal/g</strong>，
             喂 65 g 即 65 × 3.71 ≈ <strong>241 kcal</strong>。
           </p>
           <p>

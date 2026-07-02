@@ -83,7 +83,7 @@ export function FoodForm({ initial, onCancel, onSave }: Props) {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="例如 Orijen 室内伴侣猫粮"
+          placeholder="例如 Orijen猫粮"
         />
       </label>
 
