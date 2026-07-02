@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <g fill="#e8a0bf" fill-opacity="0.55">
+    <g transform="translate(12,18) rotate(-15) scale(0.8)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+    <g transform="translate(120,40) rotate(20) scale(0.7)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+    <g transform="translate(45,128) rotate(10) scale(0.75)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+    <g transform="translate(150,150) rotate(-12) scale(0.7)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+  </g>
+  <g fill="#8878c0" fill-opacity="0.55">
+    <g transform="translate(78,8) rotate(18) scale(0.7)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+    <g transform="translate(168,72) rotate(-22) scale(0.8)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+    <g transform="translate(18,172) rotate(6) scale(0.7)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+    <g transform="translate(100,98) rotate(-5) scale(0.6)"><ellipse cx="12" cy="16.5" rx="5" ry="4.2"/><circle cx="6" cy="9" r="1.7"/><circle cx="9.7" cy="6" r="1.9"/><circle cx="14.3" cy="6" r="1.9"/><circle cx="18" cy="9" r="1.7"/></g>
+  </g>
+  <g fill="#e8a0bf" fill-opacity="0.45">
+    <circle cx="92" cy="72" r="2"/>
+    <circle cx="28" cy="92" r="1.8"/>
+    <circle cx="138" cy="118" r="2"/>
+    <circle cx="182" cy="182" r="1.7"/>
+  </g>
+  <g fill="#8878c0" fill-opacity="0.45">
+    <circle cx="132" cy="162" r="1.8"/>
+    <circle cx="58" cy="56" r="2"/>
+    <circle cx="172" cy="28" r="1.8"/>
+    <circle cx="12" cy="132" r="1.6"/>
+  </g>
+</svg>
