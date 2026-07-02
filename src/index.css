@@ -472,6 +472,16 @@ textarea {
   outline: none;
   border-color: var(--primary);
 }
+.field input[type='date'] {
+  min-width: 0;
+  max-width: 100%;
+}
+@supports (-webkit-touch-callout: none) {
+  .field input[type='date'] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
 .field-row {
   display: flex;
   gap: 12px;
