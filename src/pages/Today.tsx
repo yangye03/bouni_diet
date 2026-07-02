@@ -1,7 +1,7 @@
 import { useData } from '../store/DataContext'
 import { Card } from '../components/Card'
 import { ProgressBar } from '../components/ProgressBar'
-import { prettyDate, todayStr } from '../utils/date'
+import { todayStr } from '../utils/date'
 import { formatGrams, formatKcal } from '../utils/calories'
 
 export function Today() {
@@ -40,7 +40,7 @@ export function Today() {
           <img className="cat-avatar" src={`${import.meta.env.BASE_URL}buni.jpg`} alt={settings.catName} />
           <div>
             <h1 className="page-title">{settings.catName}的饮食</h1>
-            <p className="page-subtitle">今日 · {prettyDate(today)}</p>
+            <p className="page-subtitle">今日</p>
           </div>
         </div>
       </header>

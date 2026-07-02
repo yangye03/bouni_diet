@@ -59,6 +59,7 @@ textarea {
   max-width: 480px;
   margin: 0 auto;
   min-height: 100vh;
+  min-height: 100dvh;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -686,6 +687,8 @@ textarea {
   padding: 6px 4px;
   padding-bottom: env(safe-area-inset-bottom);
   z-index: 10;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .nav-item {
   flex: 1;
